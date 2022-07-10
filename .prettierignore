@@ -1,0 +1,10 @@
+.angular
+.vscode
+node_modules
+.browserslistrc
+.editorconfig
+*.json
+
+karma.conf.js
+*.md
+
