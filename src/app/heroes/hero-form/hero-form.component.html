@@ -1,0 +1,30 @@
+<form [formGroup]="heroFormGroup">
+  <h4>
+    {{ heroFormGroup.get('name')?.value | uppercase }}
+  </h4>
+  <label class="form-label" for="name">Hero name</label>
+  <input
+    class="form-control"
+    [ngClass]="{
+      'is-invalid': heroFormGroup.controls.name.errors
+    }"
+    type="text"
+    id="name"
+    formControlName="name" />
+  <div class="invalid-feedback">name already exists</div>
+</form>
+
+<hr />
+
+<div class="d-flex justify-content-between">
+  <button class="btn btn-secondary" (click)="onBack()">
+    Back
+  </button>
+  <button class="btn btn-primary" (click)="onSave()">
+    Save
+  </button>
+</div>
+
+<hr />
+
+{{ heroFormGroup.value | json }}
