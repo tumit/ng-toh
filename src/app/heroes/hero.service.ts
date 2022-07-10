@@ -16,16 +16,11 @@ export class HeroService {
   }
 
   getHero(id: number): Observable<Hero> {
-    return this.httpClient.get<Hero>(
-      this.baseUrl + '/' + id
-    );
+    return this.httpClient.get<Hero>(this.baseUrl + '/' + id);
   }
 
   updateHero(hero: Hero): Observable<Hero> {
-    return this.httpClient.put<Hero>(
-      this.baseUrl + '/' + hero.id,
-      hero
-    );
+    return this.httpClient.put<Hero>(this.baseUrl + '/' + hero.id, hero);
   }
 
   addNewHero(hero: Hero): Observable<Hero> {
@@ -33,14 +28,10 @@ export class HeroService {
   }
 
   deleteHero(id: number): Observable<void> {
-    return this.httpClient.delete<void>(
-      this.baseUrl + '/' + id
-    );
+    return this.httpClient.delete<void>(this.baseUrl + '/' + id);
   }
 
   existsName(name: string): Observable<Hero[]> {
-    return this.httpClient.get<Hero[]>(
-      this.baseUrl + '?name=' + name
-    );
+    return this.httpClient.get<Hero[]>(this.baseUrl + '?name=' + name);
   }
 }

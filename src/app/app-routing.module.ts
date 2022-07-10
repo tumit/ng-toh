@@ -5,10 +5,7 @@ import { HeroFormComponent } from './heroes/hero-form/hero-form.component';
 const routes: Routes = [
   {
     path: 'heroes',
-    loadChildren: () =>
-      import('./heroes/heroes.module').then(
-        m => m.HeroesModule
-      ),
+    loadChildren: () => import('./heroes/heroes.module').then(m => m.HeroesModule),
   },
 ];
 

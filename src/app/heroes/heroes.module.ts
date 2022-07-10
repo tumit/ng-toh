@@ -13,10 +13,6 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [HeroFormComponent],
-  imports: [
-    CommonModule,
-    ReactiveFormsModule,
-    RouterModule.forChild(routes),
-  ],
+  imports: [CommonModule, ReactiveFormsModule, RouterModule.forChild(routes)],
 })
 export class HeroesModule {}

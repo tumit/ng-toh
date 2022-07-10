@@ -18,10 +18,7 @@ export class HeroFormComponent implements OnInit {
     }),
   });
 
-  constructor(
-    private heroService: HeroService,
-    private location: Location
-  ) {}
+  constructor(private heroService: HeroService, private location: Location) {}
 
   ngOnInit(): void {}
 
@@ -35,13 +32,9 @@ export class HeroFormComponent implements OnInit {
     }
 
     if (this.heroFormGroup.get('id')?.value) {
-      this.heroService
-        .updateHero(this.heroFormGroup.getRawValue())
-        .subscribe(() => this.onBack());
+      this.heroService.updateHero(this.heroFormGroup.getRawValue()).subscribe(() => this.onBack());
     } else {
-      this.heroService
-        .addNewHero(this.heroFormGroup.getRawValue())
-        .subscribe(() => this.onBack());
+      this.heroService.addNewHero(this.heroFormGroup.getRawValue()).subscribe(() => this.onBack());
     }
   }
 }
