@@ -1,0 +1,10 @@
+<h5 class="m-4">Login</h5>
+<div class="d-flex justify-content-start m-4">
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <label for="username" class="form-label">Username</label>
+    <input type="text" class="form-control" formControlName="username" id="username" />
+    <label for="password" class="form-label">Password</label>
+    <input type="password" class="form-control" formControlName="password" id="password" />
+    <button type="submit" class="btn btn-primary my-2">Login</button>
+  </form>
+</div>
